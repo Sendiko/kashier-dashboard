@@ -536,7 +536,7 @@ export default function HistoriesPage() {
                     setSelectedItemIds={setSelectedItemIds}
                     isLoading={isAvailableItemsLoading}
                     error={availableItemsError}
-                    _ />
+                  />
                 </div>
 
                 {/* --- Total (Calculated) --- */}
