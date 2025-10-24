@@ -70,12 +70,9 @@ export default function DashboardPage() {
     const token = Cookies.get('kashier-token');
     
     // Function to handle redirection (REMOVED)
-    /*
     const redirectToLogin = () => {
-      // Use window.location.origin to construct a valid absolute URL
       window.location.href = window.location.origin + '/login';
     };
-    */
 
     if (!token) {
       setItemsError('Authentication token not found.');
@@ -187,6 +184,7 @@ export default function DashboardPage() {
 
 
     // Run all fetch operations
+    redirectToLogin();
     fetchItems();
     fetchHistories();
     fetchUsers();
