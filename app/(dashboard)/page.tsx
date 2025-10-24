@@ -75,6 +75,7 @@ export default function DashboardPage() {
     };
 
     if (!token) {
+      redirectToLogin();
       setItemsError('Authentication token not found.');
       setHistoriesError('Authentication token not found.');
       setUsersError('Authentication token not found.'); // Add error for users
@@ -184,7 +185,6 @@ export default function DashboardPage() {
 
 
     // Run all fetch operations
-    redirectToLogin();
     fetchItems();
     fetchHistories();
     fetchUsers();
