@@ -343,7 +343,7 @@ export default function HistoriesPage() {
     try {
       if (modalMode === "create") {
         await axios.post(
-          "https://kashierapp.sendiko.my.id/api/v2/history",
+          "https://kashierapp.sendiko.my.id/api/v2/transaction",
           historyData,
           { headers: { Authorization: `Bearer ${token}` } }
         );
